@@ -1,0 +1,68 @@
+timestamp,video_id,route_id,elapsed_seconds,total_vehicles,moving_vehicles,stopped_vehicles,average_speed_kmh,traffic_level,accident_detected,distance_km,estimated_travel_time_min,data_source
+2026-10-20T17:42:25.344584+00:00,route_a.mp4,A,0,54,0,0,,HIGH,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:45:33.457390+00:00,route_a.mp4,A,0,54,0,0,,HIGH,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:45:35.557273+00:00,route_b.mp4,B,0,92,0,0,,HIGH,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:45:37.499396+00:00,route_b.mp4,B,10,78,0,0,,HIGH,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:45:39.175987+00:00,route_b.mp4,B,20,80,0,0,,HIGH,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:45:40.636972+00:00,route_c.mp4,C,0,88,0,0,,HIGH,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:45:40.955212+00:00,route_c.mp4,C,10,17,0,0,,MEDIUM,unknown,,,YOLO sampled-frame detections
+2026-10-20T17:48:46.487219+00:00,route_a.mp4,A,0,10,8,2,,HIGH,unknown,,,YOLO tracking; traffic level from edited demo pattern
+2026-10-20T17:48:51.662936+00:00,route_b.mp4,B,0,15,14,1,,MEDIUM,unknown,,,YOLO tracking; traffic level from edited demo pattern
+2026-10-20T17:48:56.775299+00:00,route_b.mp4,B,10,13,13,0,,HIGH,unknown,,,YOLO tracking; traffic level from edited demo pattern
+2026-10-20T17:49:01.557916+00:00,route_b.mp4,B,20,18,17,1,,LOW,unknown,,,YOLO tracking; traffic level from edited demo pattern
+2026-10-20T17:49:04.470808+00:00,route_c.mp4,C,0,12,12,0,,LOW,unknown,,,YOLO tracking; traffic level from edited demo pattern
+2026-10-20T17:49:04.872763+00:00,route_c.mp4,C,10,2,2,0,,HIGH,unknown,,,YOLO tracking; traffic level from edited demo pattern
+2026-10-20T17:51:13.919760+00:00,route_a.mp4,A,0.0,8,8,0,,HIGH,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:14.679680+00:00,route_a.mp4,A,3.34,8,7,1,,MEDIUM,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:15.467918+00:00,route_a.mp4,A,6.67,6,5,1,,LOW,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:17.529089+00:00,route_b.mp4,B,0.0,11,10,1,,MEDIUM,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:19.547024+00:00,route_b.mp4,B,9.75,13,12,1,,HIGH,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:21.463968+00:00,route_b.mp4,B,19.49,18,17,1,,LOW,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:22.217110+00:00,route_c.mp4,C,0.0,6,6,0,,LOW,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:22.791514+00:00,route_c.mp4,C,4.27,6,6,0,,MEDIUM,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:51:23.322070+00:00,route_c.mp4,C,8.53,2,2,0,,HIGH,unknown,,,YOLO tracking; traffic level from edited demo sequence
+2026-10-20T17:56:46.356339+00:00,route_a.mp4,A,0.0,8,8,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:47.219758+00:00,route_a.mp4,A,3.34,8,7,1,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:48.082709+00:00,route_a.mp4,A,6.67,6,5,1,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:50.089981+00:00,route_b.mp4,B,0.0,11,10,1,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:52.074903+00:00,route_b.mp4,B,9.75,13,12,1,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:53.898775+00:00,route_b.mp4,B,19.49,18,17,1,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:54.654740+00:00,route_c.mp4,C,0.0,6,6,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:55.205942+00:00,route_c.mp4,C,4.27,6,6,0,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T17:56:55.729107+00:00,route_c.mp4,C,8.53,2,2,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:18.651384+00:00,route_a.mp4,A,0.0,25,25,0,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:19.810884+00:00,route_a.mp4,A,3.34,17,17,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:20.868923+00:00,route_a.mp4,A,6.67,19,15,4,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:23.921736+00:00,route_b.mp4,B,0.0,19,18,1,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:27.055568+00:00,route_b.mp4,B,9.75,15,14,1,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:31.625146+00:00,route_b.mp4,B,19.49,24,20,4,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:33.576638+00:00,route_c.mp4,C,0.0,10,10,0,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:35.241697+00:00,route_c.mp4,C,4.27,7,7,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:04:37.337098+00:00,route_c.mp4,C,8.53,6,6,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:46.847133+00:00,route_a.mp4,A,0.0,25,25,0,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:47.887801+00:00,route_a.mp4,A,3.34,17,16,1,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:48.931716+00:00,route_a.mp4,A,6.67,19,15,4,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:52.148944+00:00,route_b.mp4,B,0.0,19,18,1,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:55.192369+00:00,route_b.mp4,B,9.75,15,14,1,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:58.170549+00:00,route_b.mp4,B,19.49,22,19,3,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:06:59.497449+00:00,route_c.mp4,C,0.0,10,10,0,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:07:00.596914+00:00,route_c.mp4,C,4.27,7,7,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:07:01.562654+00:00,route_c.mp4,C,8.53,6,6,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:22.039560+00:00,route_a.mp4,A,0.0,25,25,0,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:23.082568+00:00,route_a.mp4,A,3.34,17,16,1,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:24.075601+00:00,route_a.mp4,A,6.67,19,15,4,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:27.224458+00:00,route_b.mp4,B,0.0,19,18,1,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:30.112302+00:00,route_b.mp4,B,9.75,15,14,1,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:32.897380+00:00,route_b.mp4,B,19.49,22,19,3,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:34.154570+00:00,route_c.mp4,C,0.0,10,10,0,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:35.114433+00:00,route_c.mp4,C,4.27,7,7,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-20T18:08:36.046909+00:00,route_c.mp4,C,8.53,6,6,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:18:56.465859+00:00,route_a.mp4,A,0.0,25,25,0,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:18:57.588297+00:00,route_a.mp4,A,3.34,17,16,1,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:18:58.630279+00:00,route_a.mp4,A,6.67,19,15,4,,HIGH,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:19:01.801453+00:00,route_b.mp4,B,0.0,19,18,1,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:19:04.902171+00:00,route_b.mp4,B,9.75,15,14,1,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:19:09.140609+00:00,route_b.mp4,B,19.49,22,19,3,,MEDIUM,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:19:11.932262+00:00,route_c.mp4,C,0.0,10,10,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:19:13.953951+00:00,route_c.mp4,C,4.27,7,7,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification
+2026-10-21T16:19:15.856179+00:00,route_c.mp4,C,8.53,6,6,0,,LOW,unknown,,,YOLO tracking and heuristic traffic classification

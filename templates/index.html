@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrafficWise AI | Smart Route Navigation</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #07111f;
+            color: #edf6ff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid #1d3046;
+        }
+
+        .brand {
+            color: #22d3ee;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        header a {
+            color: #d7e8f8;
+            text-decoration: none;
+        }
+
+        main {
+            width: 92%;
+            max-width: 1450px;
+            margin: 30px auto;
+        }
+
+        .hero {
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(27px, 4vw, 42px);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #9db1c8;
+            line-height: 1.6;
+        }
+
+        .search-panel, .map-panel, .results-panel {
+            background: #0d1b2b;
+            border: 1px solid #20364c;
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 22px;
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 14px;
+            align-items: end;
+        }
+
+        label {
+            display: block;
+            color: #b9cce0;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            color: white;
+            background: #071321;
+            border: 1px solid #304860;
+            border-radius: 9px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #22d3ee;
+        }
+
+        button {
+            padding: 14px 22px;
+            background: #22d3ee;
+            color: #04121c;
+            font-weight: bold;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #67e8f9;
+        }
+
+        .section-title {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        #map {
+            height: 480px;
+            width: 100%;
+            border-radius: 12px;
+            background: #102236;
+            z-index: 1;
+        }
+
+        #route-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 16px;
+        }
+
+        .route-card {
+            background: #091625;
+            border: 1px solid #294158;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .route-card.recommended {
+            border: 1px solid #22d3ee;
+        }
+
+        .route-card h3 {
+            color: #22d3ee;
+            margin-top: 0;
+        }
+
+        .route-card p {
+            color: #c5d5e5;
+            line-height: 1.5;
+        }
+
+        .recommended-label {
+            display: inline-block;
+            background: #123e48;
+            color: #67e8f9;
+            padding: 6px 9px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        .notice {
+            color: #9db1c8;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .error {
+            color: #fca5a5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8fa4ba;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 17px 4%;
+            }
+
+            main {
+                width: 94%;
+                margin-top: 22px;
+            }
+
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+
+            #map {
+                height: 350px;
+            }
+
+            .search-panel, .map-panel, .results-panel {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">TrafficWise AI</div>
+        <a href="/admin">Admin Login</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find Your Smarter Route</h1>
+            <p>
+                Explore road routes, compare estimated travel times,
+                and prepare for AI-powered traffic recommendations.
+            </p>
+        </section>
+
+        <section class="search-panel">
+            <h2 class="section-title">Plan Your Journey</h2>
+
+            <form id="route-form" class="search-form">
+                <div>
+                    <label for="origin">Starting Location</label>
+                    <input
+                        id="origin"
+                        name="origin"
+                        type="text"
+                        placeholder="e.g. Kavali, Andhra Pradesh"
+                        required>
+                </div>
+
+                <div>
+                    <label for="destination">Destination</label>
+                    <input
+                        id="destination"
+                        name="destination"
+                        type="text"
+                        placeholder="e.g. Nellore, Andhra Pradesh"
+                        required>
+                </div>
+
+                <button type="submit">Find Routes</button>
+            </form>
+        </section>
+
+        <section class="map-panel">
+            <h2 class="section-title">Route Map</h2>
+            <div id="map"></div>
+            <p class="notice">
+                Map data © OpenStreetMap contributors.
+                Route estimates are not live traffic measurements.
+            </p>
+        </section>
+
+        <section class="results-panel">
+            <h2 class="section-title">Available Routes</h2>
+
+            <div id="route-results">
+                <p class="notice">
+                    Enter your starting location and destination to find routes.
+                </p>
+            </div>
+        </section>
+
+        <section class="results-panel">
+            <h2 class="section-title">Traffic Information</h2>
+            <p id="traffic-message" class="notice">
+                Live traffic and AI video analysis are not connected yet.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        AI Traffic Surveillance and Best Route Recommendation System
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
